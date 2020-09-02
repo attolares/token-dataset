@@ -4,14 +4,14 @@ import matplotlib.pyplot as plt
 import pandas
 import numpy as np
 
-with open('f1.txt', 'r') as infile:
+with open('spool-teste.txt', 'r') as infile:
     true_values = infile.read()
     true_values = list(true_values)
-with open('f2.txt', 'r') as infile:
+with open('detectado.txt', 'r') as infile:
     predictions = infile.read()
     predictions = list(predictions)
 
-labels = ['a','b','c','t','e'] #PREENCHER COM O ALFABETO CORRESPONDENTE
+labels = ['A','B','C','D','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','-','0','1','2','3','4','5','6','7','8','9'] #PREENCHER COM O ALFABETO CORRESPONDENTE
 
 cm = confusion_matrix(true_values, predictions, labels)
 
